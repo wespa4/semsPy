@@ -55,3 +55,12 @@
   print(max(["a", "aa", "aba"]))
   print(max(["uha", "aajh", "abasjkahd"], key = len))
 ```
+### 3.8. (уровень сложности: низкий)
+Сгенерировать случайную текстовую строку с заданным максимальным размером.
+
+**Решение**
+```
+  import random
+  import string
+  print(''.join(random.sample(string.ascii_letters + string.digits, 30)))
+```
