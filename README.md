@@ -71,3 +71,15 @@
   import string
   print(''.join(random.sample(string.ascii_letters + string.digits, 30)))
 ```
+### 3.9. (уровень сложности: средний)
+Реализовать функцию-однострочник для RLE-сжатия. Пример работы:
+```
+  >>> rle_encode('ABBCCCDEF')
+  [('A', 1), ('B', 2), ('C', 3), ('D', 1), ('E', 1), ('F', 1)]
+```
+**Решение**
+```
+  from itertools import groupby
+  rle_encode = lambda s: [(char, len(list(group))) for char, group in groupby(s)]
+  print(rle_encode('ABBCCCDEF'))
+```
